@@ -1,0 +1,49 @@
+
+
+
+Algorithm: Sentence Analysis
+
+Objective:
+- Calculate the length of a sentence (number of characters including the period).
+- Count the number of words (words are separated by a single space).
+- Count the number of vowels in the sentence.
+
+Steps:
+1. Initialize variables:
+   - `length_counter` to 0 (to track the total number of characters).
+   - `word_counter` to 0 (to count the number of words).
+   - `vowel_counter` to 0 (to count the number of vowels).
+   - `is_in_word` to false (to track whether we are inside a word).
+
+2. Begin reading characters of the sentence one by one:
+   - While the character is not a period (`.`):
+     a. Increment `length_counter` by 1.
+     b. If the character is a vowel (`a, e, i, o, u` or `A, E, I, O, U`):
+        - Increment `vowel_counter` by 1.
+     c. If the character is a space:
+        - Check if `is_in_word` is true:
+          - If true, increment `word_counter` by 1.
+          - Set `is_in_word` to false.
+     d. If the character is not a space:
+        - Set `is_in_word` to true.
+
+3. When the period (`.`) is encountered:
+   - Increment `length_counter` by 1 (for the period).
+   - If `is_in_word` is true:
+     - Increment `word_counter` by 1 (to count the last word).
+
+4. Output the results:
+   - Print `length_counter` (total characters including the period).
+   - Print `word_counter` (total number of words).
+   - Print `vowel_counter` (total number of vowels).
+
+End of Algorithm
+
+
+
+
+
+
+
+
+
